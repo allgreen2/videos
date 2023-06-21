@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<script>
 let paramString = window.location.search.split('?')[1];
 let queryString = new URLSearchParams(paramString);
 let nva = parseInt(queryString.get("nva"))
@@ -9,6 +9,7 @@ if (Number.isNaN(nva) || now > nva) {
     console.log("not-valid-after invalid, going to redirect to /")
     window.location = "/"
 }
+</script>
 
 <head>
     <meta charset="utf-8">
