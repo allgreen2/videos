@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
+<!-- Confirm Password and NVA -->
 <script>
 let paramString = window.location.search.split('?')[1];
 let queryString = new URLSearchParams(paramString);
 let nva = parseInt(queryString.get("nva"))
+
+let hash = queryString.get("h")
+let confirm = sha1(nva + "Kari is cool")
+
+if (hash !== confirm) {
+    console.log("not-valid-after invalid, going to redirect to /")
+    window.location = "/videos"
+}
+
 let now = new Date().getTime()
 if (Number.isNaN(nva) || now > nva) {
     console.log("not-valid-after invalid, going to redirect to /")
@@ -79,13 +90,13 @@ if (Number.isNaN(nva) || now > nva) {
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 col-md-6">
-                <iframe width="420" height="315"
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <iframe
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen>
                 </iframe>
             </div>
-            <div class="col-lg-7 col-md-6">
-                <iframe width="420" height="315"
-                    src="https://www.youtube.com/embed/imSefM4GPpE">
+            <div class="col-lg-5 col-md-6">
+                <iframe
+                    src="https://www.youtube.com/embed/imSefM4GPpE" allowfullscreen>
                 </iframe>
             </div>
         </div>

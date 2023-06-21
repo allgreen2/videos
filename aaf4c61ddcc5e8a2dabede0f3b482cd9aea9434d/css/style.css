@@ -1,6 +1,14 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+iframe {
+    max-height: 400px;
+    min-height: 40vmin;
+
+    max-width: 400px;
+    min-width 50vmin;
+}
+
 body {
     color: #666666;
     background: #dddddd;
