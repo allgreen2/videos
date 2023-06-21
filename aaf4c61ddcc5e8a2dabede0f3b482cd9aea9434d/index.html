@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script type="text/javascript" src="../input.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
 <!-- Confirm Password and NVA -->
 <script>
@@ -8,7 +9,7 @@ let queryString = new URLSearchParams(paramString);
 let nva = parseInt(queryString.get("nva"))
 
 let hash = queryString.get("h")
-let confirm = sha1(nva + "Kari is cool")
+let confirm = sha1(nva + secret_salt)
 
 if (hash !== confirm) {
     console.log("not-valid-after invalid, going to redirect to /")

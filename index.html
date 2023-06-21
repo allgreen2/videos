@@ -99,6 +99,7 @@
             </div>
         </div>
 
+        <script type="text/javascript" src="input.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
         <script type="text/javascript">
             "use strict"
@@ -116,7 +117,7 @@
                 request.onload = function () {
                     if (request.status >= 200 && request.status < 400) {
                         let nva = new Date().getTime() + 30_000
-                        let hash2 = sha1(nva+"Kari is cool")
+                        let hash2 = sha1(nva+secret_salt)
                         window.location = url + "?nva="+nva + "&h="+hash2
                     } else {
                         parent.location.hash = hash
