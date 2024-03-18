@@ -2,26 +2,28 @@
 <html lang="en">
 <script type="text/javascript" src="../input.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
+
 <!-- Confirm Password and NVA -->
 <script>
-let paramString = window.location.search.split('?')[1];
-let queryString = new URLSearchParams(paramString);
-let nva = parseInt(queryString.get("nva"))
+    let paramString = window.location.search.split('?')[1];
+    let queryString = new URLSearchParams(paramString);
+    let nva = parseInt(queryString.get("nva"))
 
-let hash = queryString.get("h")
-let confirm = sha1(nva + secret_salt)
+    let hash = queryString.get("h")
+    let confirm = sha1(nva + secret_salt)
 
-if (hash !== confirm) {
-    console.log("not-valid-after invalid, going to redirect to /")
-    window.location = "/videos"
-}
+    if (hash !== confirm) {
+        console.log("not-valid-after invalid, going to redirect to /")
+        window.location = "/videos"
+    }
 
-let now = new Date().getTime()
-if (Number.isNaN(nva) || now > nva) {
-    console.log("not-valid-after invalid, going to redirect to /")
-    window.location = "/videos"
-}
+    let now = new Date().getTime()
+    if (Number.isNaN(nva) || now > nva) {
+        console.log("not-valid-after invalid, going to redirect to /")
+        window.location = "/videos"
+    }
 </script>
+<!-- pwd end -->
 
 <head>
     <meta charset="utf-8">
@@ -53,124 +55,476 @@ if (Number.isNaN(nva) || now > nva) {
 </head>
 
 <body>
-<div class="wrapper">
+    <div class="wrapper">
 
-    <!-- Nav Bar Start -->
-    <div class="nav-bar">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                <a href="https://feldenkraisaa.com" class="navbar-brand">Feldenkrais Institute of Ann Arbor</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!-- Nav Bar Start -->
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <a href="https://feldenkraisaa.com" class="navbar-brand">Feldenkrais Institute of Ann Arbor</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav mr-auto">
-                        <a href="https://feldenkraisaa.com" class="nav-item nav-link active">Main Site</a>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="https://feldenkraisaa.com" class="nav-item nav-link active">Main Site</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        <!-- Carousel Start -->
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption">
+                        <h2>Feldenkrais Institute of Ann Arbor</h2>
+                        <h1>Video Content</h1>
                     </div>
                 </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Nav Bar End -->
-
-    <!-- Carousel Start -->
-    <div id="carousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="carousel-caption">
-                    <h2>Feldenkrais Institute of Ann Arbor</h2>
-                    <h1>Video Content</h1>
-                </div>
             </div>
         </div>
-    </div>
-    <!-- Carousel End -->
-
-    <div class="spacing"></div>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 col-md-6">
-                <iframe
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen>
-                </iframe>
-            </div>
-            <div class="col-lg-5 col-md-6">
-                <iframe
-                    src="https://www.youtube.com/embed/imSefM4GPpE" allowfullscreen>
-                </iframe>
-            </div>
+        <!-- Carousel End -->
+        <!-- Accordion -->
+        <div class="gallery-background">
+            <ul id="accordion">
+                <!-- 1.1 -->
+                <li>
+                    <label for="oneone"> Section 1.1 <span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="oneone" checked />
+                    <div class="gallery">
+                        <iframe width="500" height="281" src="https://www.youtube.com/embed/7yHUeh8FQ2E?si=OmBdeNUXnsZVAas1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="500" height="281" src="https://www.youtube.com/embed/wjzcIyAmd0U?si=y_rmsJD8XAgfylpJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="500" height="281" src="https://www.youtube.com/embed/1au9HmbTCJg?si=HadqdkTYt6pgouAz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="500" height="281" src="https://www.youtube.com/embed/5KjypCPKUwI?si=p4zJS2Mc2Hlj1aS-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 1.2 -->
+                <li>
+                    <label for="onetwo"> Section 1.2 <span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="onetwo" />
+                    <div class="gallery">
+                        <iframe width="500" height="281" src="https://www.youtube.com/embed/KFxQXB2k73s?si=QApOD2-bL7iXt9MI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="500" height="281" src="https://www.youtube.com/embed/tGl8LXDZPrI?si=_vQLflM9DHVi00I8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="500" height="281" src="https://www.youtube.com/embed/boHfeOfniSI?si=bAvdDZD2f3A1hWkv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="500" height="281" src="https://www.youtube.com/embed/byybHJ6aiXo?si=YxvxKkgg1af0t6-B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.1 -->
+                <li>
+                    <label for="fiveone"> Section 5.1<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fiveone" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wwmWPmZLQvs?si=3tpIOza-Mh_Eg-Ku" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gvd6-h5CnkY?si=S9Y2TyW8LC9BiUZ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pkz_WpWleCM?si=lXxzIw7DI0BDDdbD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rZOXB3ALY2k?si=em3AXVYI5sFk3gNp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tjUCZA3Ek0o?si=4wnolG4wh_X35aV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DMd_tSd6fa4?si=9QXM387BxpI8col2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.2 -->
+                <li>
+                    <label for="fivetwo"> Section 5.2<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivetwo" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nBVXsI6rQKg?si=4yDuw1cxuI9kZvv7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WiA-nA6jMd0?si=3oPgPK87EgoX7xY5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nTDOsnyFtTQ?si=7rTihAFCHo7fgRQT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/UQyw4nGRXQk?si=7nhpk-Yg5tP5IDHX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2Rt1rMBr5XM?si=U8oHcMJdpnJLINM6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.3 -->
+                <li>
+                    <label for="fivethree"> Section 5.3<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivethree" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XaIhao1dOgE?si=WqEheqGKLV1dcFYR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8lqj3_ccx3w?si=98rym4bisyP0vLQP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QBx7yzI-5t0?si=chUG40CI96T_pNMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eN4fxM_2O0s?si=7E3Cy8L0hGCeIT9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.4 -->
+                <li>
+                    <label for="fivefour"> Section 5.4<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivefour" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/cciDuUiGDjc?si=4CsBcfsdx2aLvgCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4kGVI-0Buqw?si=OMV047hV-pfunuEb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/d-YJBNnJmnQ?si=YRKMssds8jf_2B8F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MCwwXalPgeg?si=EQBrHNMOZuSWzeBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.5 -->
+                <li>
+                    <label for="fivefive"> Section 5.5<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivefive" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wc7g671Sdbc?si=XxDsUtI9Uk_If8Y8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/k2-dBr7Q-1c?si=tjsRZdiMRTt-X0cN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gfaDnlo7Q1s?si=QF41RQSdppA2Adl9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/P00kQul-o34?si=D3clZu2j4J1SbC_a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2Eh_MqbSV48?si=ssKHk3Cj6uK-i-pk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.6 -->
+                <li>
+                    <label for="fivesix"> Section 5.6<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivesix" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CxINN-jrGQQ?si=_MqFzjGz_b7upY1J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bg7WW-qrflw?si=etFKSAelTH6nBj4n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/NWZ7m3SUsVg?si=2JUZNWyoEUQQn1U4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5hdpJTt5_eM?si=fxfNjb0M0qS9Ur6G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5nYTVYoztTg?si=m_glWqEl-IJAVA5a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.7 -->
+                <li>
+                    <label for="fiveseven"> Section 5.7<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fiveseven" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vkhStzAWCBY?si=t3eBqgjX12BzKi8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LkRWkvOS1gA?si=At8XRbH8F2HXXr02" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/O8RChm4HOEg?si=akLhlMig9DYfFYaG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/q0oyS-1lmmY?si=PQmDab2O33HXWMMO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mPCexOMp_9o?si=0HpvWSYiEJT4yB7h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.8 -->
+                <li>
+                    <label for="fiveeight"> Section 5.8<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fiveeight" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ARsvRBbt2Js?si=a9v_B_V60M_p8nOV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/OyIvq5A58SA?si=EEoPSPOQ5pzFMoUx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/g05iA_beV_s?si=ZZ2BzQS8ssp855-J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_v1EQDUChiw?si=z8gVv0me-n5vpsXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZlNMKd-YgVo?si=vm-B6bjzmjUO_WP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.9 -->
+                <li>
+                    <label for="fivenine"> Section 5.9<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivenine" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xqMUD7CGLXs?si=DfXXUKE91rR7abaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/22MbjvtNW7s?si=EaMm1tfL6odS8VLx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_u-VnEoNb0A?si=cMMY8jnllZzjlSBz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/VGOxkNE9-Tw?si=DCpqiZQescGS8ZxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.10 -->
+                <li>
+                    <label for="fiveten"> Section 5.10<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fiveten" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/R9fvb-ek5q8?si=WFL9vBuXXXoiXgDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pGB-i2IIfE0?si=pLb6-gcHgvdC7O32" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iatzcHQKvKA?si=eTxZMDZKPECsWHGz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fsJsxvp60ZE?si=0697lUpBjVgimzhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.11 --
+                <li>
+                    <label for="fiveeleven"> Section 5.11<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fiveeleven" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YuNtYtk4IFM?si=rzyysUBO_lBY14S8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eOF760UtVck?si=n8ryjGbGVCyhkxYa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xI91br_1Pqk?si=lGnpym5jqNLLta0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qnEbC9Skcjk?si=IDeRMjlxuUZcYu_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/zzyqEhi6Fz0?si=gXEgqSqJt8JbwJXH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.12 --
+                <li>
+                    <label for="fivetwelve"> Section 5.12<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivetwelve" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Oq7Zgo5o4EU?si=BoI87-17z1HxaAYj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/j4rG_IAyHKs?si=bzvMnqhdijhwXkza" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pmqEYLrrWuA?si=EjNtIasxmxCJPXMu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8YyEy7RS2lM?si=6XiqfdkPWmAnXzmO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/e4EcPz6ahoo?si=bkBxsnd0z2L5WCFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.13 --
+                <li>
+                    <label for="fivethirteen"> Section 5.13<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivethirteen" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XWjjhu1GKaI?si=ePUk9RlXL9WNojfq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WYW3WykUMlw?si=I2ZDMjH-trAUIyk_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/at3qF9rA5Yw?si=PHZbn92iLb5Dn_0u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/q-ZUEZ-gdf4?si=K-Zgg80hNVk8PKTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.14 --
+                <li>
+                    <label for="fivefourteen"> Section 5.14<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivefourteen" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Shib5LSsdPQ?si=msoM6_4jeOgF4Ik-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ADmqpIRhT3I?si=xF-TVwkAdf_I8oSn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/43zQrXO4kcw?si=SaNgxolmwJepznwI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lCG3zw62HeQ?si=srsLY7UwJNCS3f_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.15 --
+                <li>
+                    <label for="fivefifteen"> Section 5.15<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivefifteen" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-hLnxCmWW8g?si=hxSuCPr9qHX3eaab" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/x7p7AVI7xAo?si=kgLBCfrjU8du3fGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3j1tj3g32HI?si=SONnWg-lXHhJa2Kl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9gICOSQV4FM?si=Gtr9QUzP7bxax0l_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.16 --
+                <li>
+                    <label for="fivesixteen"> Section 5.16<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivesixteen" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JOZ_AwGmhN0?si=qv_buvVX1n_6zrGO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Lwhfsmu11TM?si=Ssza5gB2gCUyIABG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QGnzn69_J6c?si=FgTEBJCfYSiSSE1-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1RjRuzC0kZM?si=e8c1IvIBE9Ybrx8j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.17 --
+                <li>
+                    <label for="fiveseventeen"> Section 5.17<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fiveseventeen" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2EC88bkOlMU?si=-7O4o6PqiLxauSLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QqoCEJl2oF8?si=rOc2JHcUbI4XGG9_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YZXxJ8t5xTc?si=yHl-50UQnuCzuXog" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tEDQdJETWDM?si=ct1s_29CbCTCyMDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.18 --
+                <li>
+                    <label for="fiveeighteen"> Section 5.18<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fiveeighteen" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vlmqhlaHsFg?si=0Ax_V7Vg_iiqtpTJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-rASItQUBdo?si=VaSM0yK7qE_PhsRl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kemkpw2S3aI?si=KNxqJmvvEYrtlhJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CCcYNj_MKAk?si=a0m8JsIfhDEMsBw3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.19 --
+                <li>
+                    <label for="fivenineteen"> Section 5.19<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivenineteen" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CqUUNtjFU-k?si=RfEkJxN3pZGRc-ga" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/cUG5wPvjqyQ?si=HxRkYtylC-OPeicu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Pyiis2JKsYE?si=T6tanC_wQvklJ9rQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qsMkdubasY4?si=PMukfozVqfwTPGZP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 5.20 --
+                <li>
+                    <label for="fivetwenty"> Section 5.20<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="fivetwenty" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZKS3xilRJYQ?si=56GTJUEfINNXi70U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CSOgICUSZNg?si=5x70zV35MjFi1Xd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/y3pCi8LZtLA?si=06MhLrGhEUK8EFve" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/PXkDD581wx8?si=UgmTYVTeKrxt2sCV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QT-g4_oqtwk?si=skxdCPSYc1o8v7zG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 6.1 --
+                <li>
+                    <label for="sixone"> Section 6.1<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="sixone" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/38UsN661IA4?si=x6PZl3q_HcthsdmS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rBSKeum58R4?si=u5gw_XG_VA0er3lS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mO93nGFexBU?si=8utLcKc-nrxA5hxP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/V2R2g6Yf6L0?si=FPWrfE47FdW9u_ns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/o6oi3nHIvRk?si=H5JFMLprGn0S8DV-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 6.2 --
+                <li>
+                    <label for="sixtwo"> Section 6.2<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="sixtwo" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fUGZOh7kL7s?si=yCnVJXKOSoraMa__" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wk5K-5FXXls?si=kJe1lB4Kl7DvDktI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/7Hz1xiM4ne0?si=QNfJbyi3nDKLDHs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/sP0v1gfquJM?si=bQC1N2hZlH5m8MVn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 6.3 --
+                <li>
+                    <label for="sixthree"> Section 6.3<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="sixthree" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-sM9TadWS-A?si=k0sCEX8uDR9ngRms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5-30XUtQC60?si=AlNouZibnFdPM64Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EVyPphE2DI8?si=REki3tRnyW7D4b8G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EvpUYoCVPKI?si=-zV5b_d3M4sHmUTi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Cqy2DjdsJh4?si=ZJQBj0CiribR0ZTG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 6.4 --
+                <li>
+                    <label for="sixfour"> Section 6.4<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="sixfour" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZgcAsR7fIao?si=St9cZEprffURQcmB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_nazsJUvEPo?si=Uz6l5Fm2i1QWDGj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EgciQy1XTeA?si=lKNIF61hrVzzHnz9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u2qo1WWhx3Q?si=ikNFfa8g1VF2ZDLl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 7.1 --
+                <li>
+                    <label for="sevenone"> Section 7.1<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="sevenone" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Qd2dsHFBgHw?si=XsRWmwvTRemyBB8L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/aUZbhVLDB-s?si=EEsZss4xcTEh_tZ7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/7qfJ1Vhadwo?si=tT5kxDOGZhuuCwKB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nSJVLVxmfK4?si=Gnd5dhAUFDyIwiO5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/a-_fJhmPrIw?si=VqAzyiiICVshu6ZF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tLNUxjZ0kiM?si=kXQIz5s5WTZdFBSB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_xnp79p-sKU?si=S7htGNv3dV52IK0H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XhTVe4t2H7Y?si=hXzWP_Gawxq5mp7f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/uxofngOitgk?si=ZLkW2QotDAw_K6vA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 7.2 --
+                <li>
+                    <label for="seventwo"> Section 7.2<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="seventwo" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IPBl_6qaZ10?si=Nmjm3kOMm4ntRfLq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yRQdQAxOrQw?si=jgi4vb7Nr3X9hl9W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yRQdQAxOrQw?si=jgi4vb7Nr3X9hl9W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bx2EbpMTxnU?si=kHbbeeK-fTC0R0PU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rcOGWq-BZ_8?si=7kedgqt3AP2zoq-S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xnVcyP_Q9jc?si=mKZpJrF-qsh_Ho8t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 7.3 --
+                <li>
+                    <label for="seventhree"> Section 7.3<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="seventhree" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RKLFHEpV4cg?si=yRr_W33A7IOoMeY6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/inFCLUWraWY?si=oFszrFWM_tos_B9N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/S-WFxoOAi0g?si=8VD38XlpvEVpxImr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!-- 7.4 --
+                <li>
+                    <label for="sevenfour"> Section 7.4<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="sevenfour" />
+                    <div class="gallery">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/HbphRebZxnU?si=_TfZ-6C5hAysCoMO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <!---->
+            </ul>
         </div>
-    </div>
-
-    <!-- Footer Start -->
-    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+        <!-- Accordion End -->
+        <!--
+        <div class="spacing"></div>
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
-                    <div id="contact" class="footer-contact">
-                        <h2>Contact Us</h2>
-                        <p><i class="fa fa-map-marker-alt"></i>
-                            <a href="https://www.google.com/maps/place/3075+Baker+Rd,+Dexter,+MI+48130/">
-                                3075 Baker Road</br>Dexter, Michigan 48130 USA
-                            </a>
-                        </p>
-                        <p><i class="fa fa-phone-alt"></i>
-                            <a href="tel:1-734-545-0028">
-                                +1 734 545 0028
-                            </a>
-                        </p>
-                        <p><i class="fa fa-envelope"></i>
-                            <a href="mailto:feldenkraisaa@gmail.com">
-                                feldenkraisaa@gmail.com
-                            </a>
-                        </p>
-                    </div>
+                    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen>
+                    </iframe>
                 </div>
                 <div class="col-lg-5 col-md-6">
-                    <div class="footer-link">
-                        <h2>Useful Pages</h2>
-                        <a href="https://www.feldenkraisguild.com/">The Feldenkrais Guild&reg;</a>
-                        <a href="https://feldenkrais.com/">feldenkrais.com</a>
-                        <a href="https://www.annarbor.org/">About Ann Arbor</a>
-                    </div>
+                    <iframe src="https://www.youtube.com/embed/imSefM4GPpE" allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
-        <div class="container copyright">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; <a href="https://feldenkraisaa.com">Feldenkrais Institute of Ann Arbor</a>, All Rights Reserved.</p>
-                    <h3><br>The FIAA training program has the responsibility to comply with state and local laws for post-secondary or vocational training. FGNA program accreditation does not indicate whether a training program is in compliance with local and state laws. FIAA has applied for vocational program licensure with the State of Michigan and licensure is pending.</h3>
+                 -->
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <div id="contact" class="footer-contact">
+                            <h2>Contact Us</h2>
+                            <p>
+                                <i class="fa fa-map-marker-alt"></i>
+                                <a href="https://www.google.com/maps/place/3075+Baker+Rd,+Dexter,+MI+48130/">
+                                    3075 Baker Road</br>Dexter, Michigan 48130 USA
+                                </a>
+                            </p>
+                            <p>
+                                <i class="fa fa-phone-alt"></i>
+                                <a href="tel:1-734-545-0028">
+                                    +1 734 545 0028
+                                </a>
+                            </p>
+                            <p>
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:feldenkraisaa@gmail.com">
+                                    feldenkraisaa@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Pages</h2>
+                            <a href="https://www.feldenkraisguild.com/">The Feldenkrais Guild&reg;</a>
+                            <a href="https://feldenkrais.com/">feldenkrais.com</a>
+                            <a href="https://www.annarbor.org/">About Ann Arbor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="https://feldenkraisaa.com">Feldenkrais Institute of Ann Arbor</a>, All Rights Reserved.</p>
+                        <h3><br>The FIAA training program has the responsibility to comply with state and local laws for post-secondary or vocational training. FGNA program accreditation does not indicate whether a training program is in compliance with local and state laws. FIAA has applied for vocational program licensure with the State of Michigan and licensure is pending.</h3>
 
-                </div>
-                <div class="col-md-6">
-                    <p>
-                        Developed by <a href="http://linkedin.karigreen.com">Kari Green</a></br>
-                        <label><a href="https://www.flickr.com/photos/98826299@N00/9426609446">"Downtown Dexter, Michigan"</a> by <a href="https://www.flickr.com/photos/98826299@N00">Tatiana12</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a></label>
-                    </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            Developed by <a href="http://linkedin.karigreen.com">Kari Green</a></br>
+                            <label><a href="https://www.flickr.com/photos/98826299@N00/9426609446">"Downtown Dexter, Michigan"</a> by <a href="https://www.flickr.com/photos/98826299@N00">Tatiana12</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a></label>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     </div>
-    <!-- Footer End -->
 
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-</div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
 
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/isotope/isotope.pkgd.min.js"></script>
-<script src="lib/lightbox/js/lightbox.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/slick/slick.min.js"></script>
-
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
