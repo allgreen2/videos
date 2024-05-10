@@ -1,1 +1,0 @@
-let secret_salt = "Kari is cool";

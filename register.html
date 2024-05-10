@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="register.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <title>Feldenkrais Institute of Ann Arbor</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Feldenkrais Institute of Ann Arbor" name="keywords">
+    <meta content="Feldenkrais Institute of Ann Arbor" name="description">
+
+    <!-- Favicon -->
+    <link href="img/tree_only_logo.png" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="lib/flaticon2/font/flaticon.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Nav Bar Start -->
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <a href="https://feldenkraisaa.com" class="navbar-brand">Feldenkrais Institute of Ann Arbor</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="https://feldenkraisaa.com" class="nav-item nav-link active">Main Site</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        <div id="login_container">
+            <div id="content_container">
+                <div id="form_container">
+                    <div id="form_header_container">
+                        <h2 id="form_header">Register</h2>
+                    </div>
+
+                    <div id="form_content_container">
+                        <div id="form_content_inner_container">
+                            <input type="text" id="full_name" placeholder="Full name">
+                            <input type="email" id="email" placeholder="Email">
+                            <input type="password" id="password" placeholder="New Password">
+                            <input type="password" id="check" placeholder="Confirm Password">
+
+                            <div id="button_container">
+                                <button onclick="register()">Register</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="-1s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <div id="contact" class="footer-contact">
+                            <h2>Contact Us</h2>
+                            <p>
+                                <i class="fa fa-map-marker-alt"></i>
+                                <a href="https://www.google.com/maps/place/3075+Baker+Rd,+Dexter,+MI+48130/">
+                                    3075 Baker Road</br>Dexter, Michigan 48130 USA
+                                </a>
+                            </p>
+                            <p>
+                                <i class="fa fa-phone-alt"></i>
+                                <a href="tel:1-734-545-0028">
+                                    +1 734 545 0028
+                                </a>
+                            </p>
+                            <p>
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:feldenkraisaa@gmail.com">
+                                    feldenkraisaa@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Pages</h2>
+                            <a href="https://www.feldenkraisguild.com/">The Feldenkrais Guild&reg;</a>
+                            <a href="https://feldenkrais.com/">feldenkrais.com</a>
+                            <a href="https://www.annarbor.org/">About Ann Arbor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="https://feldenkraisaa.com">Feldenkrais Institute of Ann Arbor</a>, All Rights Reserved.</p>
+                        <h3><br>The FIAA training program has the responsibility to comply with state and local laws for post-secondary or vocational training. FGNA program accreditation does not indicate whether a training program is in compliance with local and state laws. FIAA has applied for vocational program licensure with the State of Michigan and licensure is pending.</h3>
+
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            Developed by <a href="http://linkedin.karigreen.com">Kari Green</a></br>
+                            <label><a href="https://www.flickr.com/photos/98826299@N00/9426609446">"Downtown Dexter, Michigan"</a> by <a href="https://www.flickr.com/photos/98826299@N00">Tatiana12</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a></label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
