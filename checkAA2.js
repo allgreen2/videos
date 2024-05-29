@@ -2,7 +2,7 @@ const email = localStorage.getItem('email')
 const loginTime = localStorage.getItem('logintime')
 
 if (email == null) {
-    window.location.assign('login.html')
+    window.location.assign('loginAA2.html')
 }
 
 now = new Date().getTime()
