@@ -37,7 +37,7 @@ function login() {
             logintime = new Date().getTime()
             localStorage.setItem('email', email)
             localStorage.setItem('logintime', logintime)
-            window.location.assign('index.html')
+            window.location.assign('index')
         })
         .catch(function (error) {
             var error_code = error.code
