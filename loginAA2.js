@@ -1,13 +1,12 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyDHqfWekaTA3zpHZlypD8akQwAqi7FGNW0",
-    authDomain: "contact-form-73866.firebaseapp.com",
-    databaseURL: "https://contact-form-73866-default-rtdb.firebaseio.com",
-    projectId: "contact-form-73866",
-    storageBucket: "contact-form-73866.appspot.com",
-    messagingSenderId: "658678159726",
-    appId: "1:658678159726:web:88fe2df4087c33f041c97f",
-    measurementId: "G-2965MEQJD5"
+    apiKey: "AIzaSyA3dwICC7P3CRN86LyNh3uezy0vOFsBF8A",
+    authDomain: "aa2-login.firebaseapp.com",
+    databaseURL: "https://aa2-login-default-rtdb.firebaseio.com",
+    projectId: "aa2-login",
+    storageBucket: "aa2-login.appspot.com",
+    messagingSenderId: "77094954317",
+    appId: "1:77094954317:web:d7899979f369d185030304"
 };
 
 
@@ -38,7 +37,7 @@ function login() {
             logintime = new Date().getTime()
             localStorage.setItem('email', email)
             localStorage.setItem('logintime', logintime)
-            window.location.assign('index.html')
+            window.location.assign('index')
         })
         .catch(function (error) {
             var error_code = error.code

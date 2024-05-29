@@ -1,13 +1,12 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyDHqfWekaTA3zpHZlypD8akQwAqi7FGNW0",
-    authDomain: "contact-form-73866.firebaseapp.com",
-    databaseURL: "https://contact-form-73866-default-rtdb.firebaseio.com",
-    projectId: "contact-form-73866",
-    storageBucket: "contact-form-73866.appspot.com",
-    messagingSenderId: "658678159726",
-    appId: "1:658678159726:web:88fe2df4087c33f041c97f",
-    measurementId: "G-2965MEQJD5"
+    apiKey: "AIzaSyA3dwICC7P3CRN86LyNh3uezy0vOFsBF8A",
+    authDomain: "aa2-login.firebaseapp.com",
+    databaseURL: "https://aa2-login-default-rtdb.firebaseio.com",
+    projectId: "aa2-login",
+    storageBucket: "aa2-login.appspot.com",
+    messagingSenderId: "77094954317",
+    appId: "1:77094954317:web:d7899979f369d185030304"
 };
 
 
@@ -17,7 +16,6 @@ const database = firebase.database()
 
 
 function register() {
-    full_name = document.getElementById('full_name').value
     email = document.getElementById('email').value
     password = document.getElementById('password').value
     check = document.getElementById('check').value
@@ -30,10 +28,6 @@ function register() {
         alert('Password must be longer than 6 characters and match')
         return
     }
-    if (validate_field(full_name) == false) {
-        alert('One or More Extra Fields is Outta Line!!')
-        return
-    }
 
     auth.createUserWithEmailAndPassword(email, password)
         .then(function () {
@@ -42,7 +36,6 @@ function register() {
 
             var user_data = {
                 email: email,
-                full_name: full_name
             }
 
             database_ref.child('users/' + user.uid).set(user_data)
@@ -92,7 +85,7 @@ function send_email() {
     auth.currentUser.sendEmailVerification()
         .then(() => {
             alert('User Created, Proceed to login')
-            window.location.assign('login.html')
+            window.location.assign('loginAA2')
         })
         .catch(function (error) {
             var error_message = error.message
