@@ -85,7 +85,7 @@ function send_email() {
     auth.currentUser.sendEmailVerification()
         .then(() => {
             alert('User Created, Proceed to login')
-            window.location.assign('loginAA2')
+            window.location.assign('loginAA2.html')
         })
         .catch(function (error) {
             var error_message = error.message
