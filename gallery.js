@@ -11,19 +11,36 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-var fileText = document.querySelector(".fileText");
 var fileItem;
-var fileName;
 
 function getFile(e){
-    fileItem = e.target.files[0];
-    fileName = fileItem.name;
+    fileItem = document.getElementById("file").files[0];
+
+    console.log(fileName);
+    console.log(fileItem);
 }
 
 function upload() {
+    var reader = new FileReader();
+    reader.onloadend = function (evt) {
+        var blob = new Blob([evt.target.result], { type: "image/jpeg" });
 
-    let storageRef = firebase.storage().ref("images/" + fileName);
-    let uploadTask = storageRef.put(fileItem);
+        var name = document.getElementById("Name")
+        var storageRef = firebase.storage().ref(name + '/' + file.name);
+        console.warn(file); // Watch Screenshot
+        var uploadTask = storageRef.put(blob);
+
+    }
+
+    reader.onerror = function (e) {
+        console.log("Failed file read: " + e.toString());
+    };
+    reader.readAsArrayBuffer(file);
+
+
+
+    let storageRef = firebase.storage().ref(fileItem.name);
+    let uploadTask = storageRef.child(fileName).put(fileItem);
 
     uploadTask.on("state_change", (snapshot) => {
         console.log(snapshot);
@@ -33,3 +50,18 @@ function upload() {
         alert("ERROR")
     })
 }
+
+/*
+function upload() {
+    let storageRef = firebase.storage().ref(fileItem.name);
+    let uploadTask = storageRef.child(fileName).put(fileItem);
+
+    uploadTask.on("state_change", (snapshot) => {
+        console.log(snapshot);
+        alert("SUCCESS")
+    }, (error) => {
+        console.log("Error is ", error);
+        alert("ERROR")
+    })
+}
+*/

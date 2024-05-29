@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase-storage.js"></script>
 <script src="gallery.js"></script>
 
 <head>
@@ -70,7 +70,7 @@
                         <div id="form_content_inner_container">
                             <input type="email" id="email" placeholder="Email" />
                             <input type="text" id="name" placeholder="Name" />
-                            <input type="file" id="file" class="file" onchange="getFile(event)" accept="img/png,img/jpeg"/>
+                            <input type="file" id="file" class="file" onchange="getFile(event)" accept="img/png,img/jpeg,img/jpg" />
 
                             <div id="button_container">
                                 <button onclick="upload()">Upload Image</button>
