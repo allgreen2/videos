@@ -16,39 +16,18 @@ var fileItem;
 function getFile(e){
     fileItem = document.getElementById("file").files[0];
 
-    console.log(fileName);
+    console.log(fileItem.name);
     console.log(fileItem);
 }
 
 function upload() {
-    var reader = new FileReader();
-    reader.onloadend = function (evt) {
-        var blob = new Blob([evt.target.result], { type: "image/jpeg" });
-
-        var name = document.getElementById("Name")
-        var storageRef = firebase.storage().ref(name + '/' + file.name);
-        console.warn(file); // Watch Screenshot
-        var uploadTask = storageRef.put(blob);
-
-    }
-
-    reader.onerror = function (e) {
-        console.log("Failed file read: " + e.toString());
-    };
-    reader.readAsArrayBuffer(file);
-
-
 
     let storageRef = firebase.storage().ref(fileItem.name);
-    let uploadTask = storageRef.child(fileName).put(fileItem);
 
-    uploadTask.on("state_change", (snapshot) => {
+    ref.put(fileItem).then((snapshot) => {
+        console.log('Uploaded a blob or file!');
         console.log(snapshot);
-        alert("SUCCESS")
-    }, (error) => {
-        console.log("Error is ", error);
-        alert("ERROR")
-    })
+    });
 }
 
 /*
