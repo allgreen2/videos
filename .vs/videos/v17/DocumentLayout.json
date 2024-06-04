@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\gallery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:gallery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\videosAA1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:videosAA1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\gallery.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:gallery.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\loginAA1.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:loginAA1.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\loginAA1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:loginAA1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\checkAA1.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:checkAA1.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\registerAA1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:registerAA1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\registerAA1.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:registerAA1.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,28 +38,80 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "gallery.html",
-              "DocumentMoniker": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\gallery.html",
-              "RelativeDocumentMoniker": "gallery.html",
-              "ToolTip": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\gallery.html",
-              "RelativeToolTip": "gallery.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "videosAA1.html",
+              "DocumentMoniker": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\videosAA1.html",
+              "RelativeDocumentMoniker": "videosAA1.html",
+              "ToolTip": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\videosAA1.html",
+              "RelativeToolTip": "videosAA1.html",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFgAAAC0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-29T04:11:47.077Z",
+              "WhenOpened": "2024-06-04T21:23:02.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "gallery.js",
-              "DocumentMoniker": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\gallery.js",
-              "RelativeDocumentMoniker": "gallery.js",
-              "ToolTip": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\gallery.js",
-              "RelativeToolTip": "gallery.js",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB0AAAAHAAAA",
+              "DocumentIndex": 3,
+              "Title": "checkAA1.js",
+              "DocumentMoniker": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\checkAA1.js",
+              "RelativeDocumentMoniker": "checkAA1.js",
+              "ToolTip": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\checkAA1.js",
+              "RelativeToolTip": "checkAA1.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-29T04:13:27.588Z",
+              "WhenOpened": "2024-06-04T21:23:19.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "loginAA1.html",
+              "DocumentMoniker": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\loginAA1.html",
+              "RelativeDocumentMoniker": "loginAA1.html",
+              "ToolTip": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\loginAA1.html",
+              "RelativeToolTip": "loginAA1.html",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAADQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-06-04T21:20:53.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "loginAA1.js",
+              "DocumentMoniker": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\loginAA1.js",
+              "RelativeDocumentMoniker": "loginAA1.js",
+              "ToolTip": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\loginAA1.js",
+              "RelativeToolTip": "loginAA1.js",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-04T21:20:52.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "registerAA1.html",
+              "DocumentMoniker": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\registerAA1.html",
+              "RelativeDocumentMoniker": "registerAA1.html",
+              "ToolTip": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\registerAA1.html",
+              "RelativeToolTip": "registerAA1.html",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAA8AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-06-04T21:16:11.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "registerAA1.js",
+              "DocumentMoniker": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\registerAA1.js",
+              "RelativeDocumentMoniker": "registerAA1.js",
+              "ToolTip": "C:\\Users\\wdcas\\Desktop\\GitHub\\videos\\registerAA1.js",
+              "RelativeToolTip": "registerAA1.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-04T21:16:30.22Z",
               "EditorCaption": ""
             }
           ]

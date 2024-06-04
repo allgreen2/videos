@@ -5,7 +5,7 @@ iframe {
     max-height: 225px;
     min-height: 40vmin;
     max-width: 400px;
-    min-width 50vmin;
+    min-width: 50vmin;
 }
 
 body {
@@ -2825,4 +2825,15 @@ input {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 18px;
+}
+
+#link_header {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    color: #030f27;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    width: 300px;
 }
