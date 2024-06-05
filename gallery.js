@@ -1,37 +1,52 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyBdckDLltWwUKCsWLHm-V2mZklrgoY9RVI",
-    authDomain: "gallery-f091d.firebaseapp.com",
-    projectId: "gallery-f091d",
-    storageBucket: "gallery-f091d.appspot.com",
-    messagingSenderId: "844175084149",
-    appId: "1:844175084149:web:8bcd0e029568b9ddeb463c"
+    apiKey: "AIzaSyAqinKXra6i70A3XoIDVKC8VKk8lRSnNVE",
+    authDomain: "photorosterfiaa.firebaseapp.com",
+    projectId: "photorosterfiaa",
+    storageBucket: "photorosterfiaa.appspot.com",
+    messagingSenderId: "626832165676",
+    appId: "1:626832165676:web:4e55909660e4f67eeb7a89"
 };
 
 
 firebase.initializeApp(firebaseConfig);
 
 var fileItem;
+var userName;
 
 function getFile(e){
     fileItem = document.getElementById("file").files[0];
+    userName = document.getElementById("name").value;
 
-    console.log(fileItem.name);
     console.log(fileItem);
 }
 
 function upload() {
+    let storageRef = firebase.storage().ref(fileItem.name);
+    let uploadTask = storageRef.child(userName).put(fileItem);
 
+    uploadTask.on("state_changed", (snapshot) => {
+        console.log(snapshot);
+        if (snapshot.totalBytes == snapshot.bytesTransferred) {
+            alert('Upload Completed')
+        }
+    }, (error) => {
+        console.log("Error is ", error);
+        alert('Please make sure email and name valid')
+    })
+}
+
+/*
     let storageRef = firebase.storage().ref(fileItem.name);
 
     ref.put(fileItem).then((snapshot) => {
         console.log('Uploaded a blob or file!');
         console.log(snapshot);
     });
-}
+*/
+
 
 /*
-function upload() {
     let storageRef = firebase.storage().ref(fileItem.name);
     let uploadTask = storageRef.child(fileName).put(fileItem);
 
@@ -42,5 +57,4 @@ function upload() {
         console.log("Error is ", error);
         alert("ERROR")
     })
-}
 */
