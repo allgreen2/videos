@@ -32,29 +32,6 @@ function upload() {
         }
     }, (error) => {
         console.log("Error is ", error);
-        alert('Please make sure email and name valid')
+        alert('Please make sure name is valid')
     })
 }
-
-/*
-    let storageRef = firebase.storage().ref(fileItem.name);
-
-    ref.put(fileItem).then((snapshot) => {
-        console.log('Uploaded a blob or file!');
-        console.log(snapshot);
-    });
-*/
-
-
-/*
-    let storageRef = firebase.storage().ref(fileItem.name);
-    let uploadTask = storageRef.child(fileName).put(fileItem);
-
-    uploadTask.on("state_change", (snapshot) => {
-        console.log(snapshot);
-        alert("SUCCESS")
-    }, (error) => {
-        console.log("Error is ", error);
-        alert("ERROR")
-    })
-*/
