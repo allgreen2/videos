@@ -2837,3 +2837,28 @@ input {
     font-size: 28px;
     width: 300px;
 }
+
+.headshot {
+    margin: 10px;
+}
+
+    .headshot img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 20px;
+    }
+
+.headshot h4{
+    text-align: center;
+    font-size: 18px;
+}
+
+.gallery_headshot {
+    display: flex;
+    padding-left: 50px;
+}
+
+.gallery-background hr{
+    width: 200px;
+}
