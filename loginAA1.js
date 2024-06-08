@@ -35,7 +35,7 @@ function login() {
             database_ref.child('users/' + user.uid).update(user_data)
             logintime = new Date().getTime()
             localStorage.setItem('email', email)
-            localStorage.setItem('logintime', logintime)
+            localStorage.setItem('logintime', logintimeAA1)
             window.location.assign('videosAA1')
         })
         .catch(function (error) {

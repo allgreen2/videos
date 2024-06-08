@@ -1,5 +1,5 @@
 const email = localStorage.getItem('email')
-const loginTime = localStorage.getItem('logintime')
+const loginTime = localStorage.getItem('logintimeAA1')
 
 if (email == null) {
     window.location.assign('loginAA1')
