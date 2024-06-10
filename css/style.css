@@ -2856,7 +2856,12 @@ input {
 
 .gallery_headshot {
     display: flex;
-    padding-left: 50px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    width: 60%;
 }
 
 .gallery-background hr{
