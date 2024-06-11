@@ -2840,12 +2840,13 @@ input {
 
 .headshot {
     margin: 10px;
+    padding-bottom: 20px;
 }
 
     .headshot img {
         width: 150px;
         height: 150px;
-        border-radius: 75%;
+        border-radius: 50%;
         margin: 20px;
         object-fit: cover;
     }
@@ -2863,6 +2864,8 @@ input {
     align-items: center;
     margin: auto;
     width: 60%;
+    background: #8aa8bd;
+    border-radius: 2%;
 }
 
 .gallery-background hr{
