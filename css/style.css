@@ -2845,8 +2845,9 @@ input {
     .headshot img {
         width: 150px;
         height: 150px;
-        border-radius: 50%;
+        border-radius: 75%;
         margin: 20px;
+        object-fit: cover;
     }
 
 .headshot h4{
