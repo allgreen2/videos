@@ -2633,10 +2633,12 @@ a:focus {
 
 .gallery-background {
     background: #789bb3;
+    padding-top: 40px;
 }
 
 #accordion {
-    margin: 100px auto;
+    margin: 50px auto;
+    padding-right: 40px;
     width: 100%;
 }
 
