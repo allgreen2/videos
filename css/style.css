@@ -2677,7 +2677,7 @@ a:focus {
     }
 
     #accordion label + input[type="radio"]:checked + .gallery{
-        max-height: 1000px;
+        max-height: 10000px;
     }
 
     /*
@@ -2804,7 +2804,8 @@ input {
 }
 
 .pdf_container {
-    
+    border-bottom: 2px solid transparent;
+    border-color: #000000;
 }
 
 #gallery_header {
