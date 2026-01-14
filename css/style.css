@@ -213,7 +213,8 @@ a:focus {
     color: #ffffff;
     border: 2px solid #ffffff;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 18px;
+    background: #ffffff;
 }
 
 .nav-bar .btn:hover {
@@ -260,9 +261,11 @@ a:focus {
     }
     
     .nav-bar .btn {
-        display: none;
+        
     }
 }
+
+
 
 
 /*******************************/
@@ -2874,3 +2877,4 @@ input {
 .gallery-background hr{
     width: 200px;
 }
+
