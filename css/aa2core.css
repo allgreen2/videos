@@ -611,8 +611,11 @@ a:focus {
 }
 
 .container-fluid .container {
-    margin-top: 115px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
+
+
 
 .faqs .container {
     margin-top: 100px;
